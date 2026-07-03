@@ -1281,7 +1281,7 @@ def validate_settings(state, model_type, single_prompt, inputs, silent=False):
             if image_outputs:
                 if image_mask is None:
                     # return err("You must provide a Image Mask")
-					image_mask = image_guide
+					image_mask = Image.new("RGB", image_guide.size, (0, 0, 0))
             else:
                 if video_mask is None:
                     return err("You must provide a Video Mask")
