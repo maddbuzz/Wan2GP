@@ -1280,7 +1280,8 @@ def validate_settings(state, model_type, single_prompt, inputs, silent=False):
         if "A" in video_prompt_type and not "U" in video_prompt_type:             
             if image_outputs:
                 if image_mask is None:
-                    return err("You must provide a Image Mask")
+                    # return err("You must provide a Image Mask")
+					image_mask = image_guide
             else:
                 if video_mask is None:
                     return err("You must provide a Video Mask")
